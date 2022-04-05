@@ -38,6 +38,5 @@ with engine.connect() as conn:
 
 #inserting some non fiction books into the library
 with engine.connect() as conn:
-    conn.execute(text("INSERT INTO BOOK_INFO(BOOK_ID, TITLE, AUTHOR, GENRE) VALUES (5,"MERPEOPLE: A COMPREHENSIVE GUIDE TO THEIR LANGUAGE AND CUSTOMS", "D.MARWOOD", "NON-FICTION")",
+    conn.execute(text("""INSERT INTO BOOK_INFO(BOOK_ID, TITLE, AUTHOR, GENRE) VALUES (5,'MERPEOPLE: A COMPREHENSIVE GUIDE TO THEIR LANGUAGE AND CUSTOMS', 'D.MARWOOD', 'NON-FICTION')""")),
     conn.commit()
-
